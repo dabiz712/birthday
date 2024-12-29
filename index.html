@@ -7,14 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>¡Bienvenido a tu aventura de cumpleaños!</h1>
-    <div id="question-container">
-        <p id="question">Pregunta 1: ¿Cuál es mi color favorito?</p>
-        <input type="text" id="answer" placeholder="Tu respuesta aquí">
-        <button id="submit">Enviar</button>
+    <!-- Sección de Login -->
+    <div id="login">
+        <h2>Introduce la contraseña para continuar:</h2>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="submit-password">Acceder</button>
+        <p id="error" style="color: red; display: none;">Contraseña incorrecta.</p>
     </div>
-    <div id="hint" style="display: none;">
-        <p>¡Has completado todas las preguntas! La pista es: "Busca en el cajón azul".</p>
+
+    <!-- Sección de Preguntas -->
+    <div id="questions" style="display: none;">
+        <h1>¡Bienvenido a tu aventura de cumpleaños!</h1>
+        <div id="question-container">
+            <p id="question">Pregunta 1: ¿Cuál es mi color favorito?</p>
+            <input type="text" id="answer" placeholder="Tu respuesta aquí">
+            <button id="submit-answer">Enviar</button>
+        </div>
+        <div id="hint" style="display: none;">
+            <p>¡Has completado todas las preguntas! La pista es: "Busca en el cajón azul".</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

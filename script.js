@@ -1,3 +1,7 @@
+// Contraseña correcta
+const correctPassword = "cumple123";
+
+// Preguntas y Respuestas
 const questions = [
     { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "azul" },
     { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "30" },
@@ -6,7 +10,19 @@ const questions = [
 
 let currentQuestion = 0;
 
-document.getElementById("submit").addEventListener("click", () => {
+// Validar Contraseña
+document.getElementById("submit-password").addEventListener("click", () => {
+    const enteredPassword = document.getElementById("password").value;
+    if (enteredPassword === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("questions").style.display = "block";
+    } else {
+        document.getElementById("error").style.display = "block";
+    }
+});
+
+// Validar Respuestas de las Preguntas
+document.getElementById("submit-answer").addEventListener("click", () => {
     const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
     if (userAnswer === questions[currentQuestion].answer) {
         currentQuestion++;
