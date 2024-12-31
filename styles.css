@@ -99,6 +99,14 @@ button {
 }
 
 /* Estilos de los inputs y botones en la pantalla de login */
+#login-form {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 #login input, #login button {
     font-size: 18px; /* Ajuste de tamaño */
     padding: 12px;
