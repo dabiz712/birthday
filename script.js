@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "cumple123";
+const correctPassword = "14082022";
 
 // Preguntas y Respuestas
 const questions = [
