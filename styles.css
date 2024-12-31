@@ -7,14 +7,14 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(3px); /* Efecto difuminado */
+    filter: blur(2px); /* Efecto difuminado */
     z-index: -1;
     transition: background-image 0.5s ease-in-out; /* Suavidad al cambiar el fondo */
 }
 
 /* Contenedor de preguntas */
 #question-container {
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco semitransparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
