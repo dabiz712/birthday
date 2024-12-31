@@ -12,6 +12,50 @@
     transition: background-image 0.5s ease-in-out; /* Suavidad al cambiar el fondo */
 }
 
+/* Contenedor de preguntas */
+#question-container {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto; /* Espaciado superior */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Alineación del texto de las preguntas */
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Cambios en el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Mantiene disposición vertical */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100vh;
+    margin: 0; /* Elimina márgenes predeterminados del navegador */
+    padding-top: 20px; /* Espacio desde la parte superior */
+}
+
+/* Título principal */
+h1 {
+    color: #ff6f61;
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin: 20px 0; /* Ajuste de márgenes */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    font-size: 24px; /* Tamaño de fuente ajustable */
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas si es necesario */
+    word-break: break-word; /* Rompe las palabras largas si es necesario */
+}
+
 /* Estilos específicos para la pantalla de login */
 #login-screen {
     position: fixed; /* Fija la posición */
@@ -70,8 +114,19 @@
 
 /* Asegurarnos de que los elementos estén por encima del fondo */
 input, button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     position: relative;
     z-index: 2; /* Asegura que los inputs y botones estén por encima de otros elementos */
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
 }
 
 /* Ajustes responsivos para pantallas pequeñas (móviles) */
