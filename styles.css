@@ -14,13 +14,14 @@
 
 /* Contenedor de preguntas */
 #question-container {
-    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 20px auto; /* Espaciado superior */
+    text-align: center; /* Alineación del texto */
 }
 
 /* Alineación del texto */
@@ -30,20 +31,23 @@
     color: #333;
 }
 
+/* Cambios en el body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Asegura que ocupa toda la pantalla */
+    flex-direction: column; /* Mantiene disposición vertical */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100vh;
     margin: 0; /* Elimina márgenes predeterminados del navegador */
+    padding-top: 20px; /* Espacio desde la parte superior */
 }
 
 h1 {
     color: #ff6f61;
+    margin: 20px 0; /* Ajuste de márgenes */
 }
 
 input, button {
