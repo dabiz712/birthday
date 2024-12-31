@@ -47,7 +47,10 @@ body {
 
 h1 {
     color: #ff6f61;
+    text-align: center; /* Asegura que el texto esté centrado */
     margin: 20px 0; /* Ajuste de márgenes */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    font-size: 24px; /* Tamaño de fuente ajustable */
 }
 
 input, button {
@@ -62,4 +65,13 @@ button {
     background-color: #ff6f61;
     color: white;
     cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        text-align: center; /* Asegura que el título esté centrado */
+        margin: 10px 0; /* Reduce los márgenes si es necesario */
+    }
 }
