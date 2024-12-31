@@ -51,6 +51,8 @@ h1 {
     margin: 20px 0; /* Ajuste de márgenes */
     width: 100%; /* Asegura que ocupe todo el ancho disponible */
     font-size: 24px; /* Tamaño de fuente ajustable */
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas si es necesario */
+    word-break: break-word; /* Rompe las palabras largas si es necesario */
 }
 
 input, button {
@@ -70,7 +72,6 @@ button {
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     h1 {
-        font-size: 20px; /* Ajusta el tamaño del texto para pantallas pequeñas */
         text-align: center; /* Asegura que el título esté centrado */
         margin: 10px 0; /* Reduce los márgenes si es necesario */
     }
