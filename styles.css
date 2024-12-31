@@ -24,7 +24,7 @@
     text-align: center; /* Alineación del texto */
 }
 
-/* Alineación del texto */
+/* Alineación del texto de las preguntas */
 #question {
     font-size: 20px;
     font-weight: bold;
@@ -45,6 +45,7 @@ body {
     padding-top: 20px; /* Espacio desde la parte superior */
 }
 
+/* Título principal */
 h1 {
     color: #ff6f61;
     text-align: center; /* Asegura que el texto esté centrado */
@@ -55,6 +56,7 @@ h1 {
     word-break: break-word; /* Rompe las palabras largas si es necesario */
 }
 
+/* Estilo de los inputs y botones */
 input, button {
     font-size: 16px;
     padding: 10px;
@@ -69,10 +71,42 @@ button {
     cursor: pointer;
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
+/* Estilos específicos para la pantalla de login */
+#login-screen {
+    position: fixed; /* Fija la posición */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('tu-imagen-de-fondo.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+/* Estilo del texto de login */
+#login-text {
+    font-size: 36px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    color: white; /* Color del texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin: 0;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para hacer el texto más legible sobre el fondo */
+}
+
+/* Ajustes responsivos para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     h1 {
         text-align: center; /* Asegura que el título esté centrado */
         margin: 10px 0; /* Reduce los márgenes si es necesario */
+    }
+
+    /* Estilos adicionales si es necesario */
+    input, button {
+        font-size: 14px; /* Reducir el tamaño de los botones e inputs en móviles */
     }
 }
