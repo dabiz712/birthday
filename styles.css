@@ -98,6 +98,17 @@ button {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para hacer el texto más legible sobre el fondo */
 }
 
+/* Estilos de los inputs y botones en la pantalla de login */
+#login input, #login button {
+    font-size: 18px; /* Ajuste de tamaño */
+    padding: 12px;
+    margin: 10px;
+    border: none; /* Sin borde */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px; /* Controlar el tamaño del campo */
+}
+
 /* Ajustes responsivos para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     h1 {
@@ -108,5 +119,10 @@ button {
     /* Estilos adicionales si es necesario */
     input, button {
         font-size: 14px; /* Reducir el tamaño de los botones e inputs en móviles */
+    }
+
+    /* Ajuste de login-text en pantallas pequeñas */
+    #login-text {
+        font-size: 28px; /* Reducir el tamaño del texto en móviles */
     }
 }
