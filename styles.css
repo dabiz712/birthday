@@ -26,28 +26,31 @@
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente */
     z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    flex-direction: column; /* Apila los elementos en columna */
+    text-align: center; /* Asegura que todo el contenido esté centrado */
 }
 
-/* Asegurando que los elementos estén por encima del fondo */
+/* Estilo del texto de login */
 #login-text {
     font-size: 36px; /* Aumenta el tamaño de la fuente */
     font-weight: bold;
     color: white; /* Color del texto */
     text-align: center; /* Asegura que el texto esté centrado */
-    margin: 0;
-    padding: 20px;
+    margin: 20px 0; /* Espacio alrededor del texto */
+    padding: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para hacer el texto más legible sobre el fondo */
 }
 
-/* Estilos de los inputs y botones en la pantalla de login */
+/* Formulario de login */
 #login-form {
     display: flex;
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     align-items: center;
     justify-content: center;
-    text-align: center;
+    width: 100%;
 }
 
+/* Estilo de los inputs y botones en la pantalla de login */
 #login input, #login button {
     font-size: 18px; /* Ajuste de tamaño */
     padding: 12px;
@@ -58,15 +61,17 @@
     max-width: 400px; /* Controlar el tamaño del campo */
 }
 
-/* Asegurarnos de que la caja de texto esté interactuable */
+/* Estilo del mensaje de error */
+#error {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Asegurarnos de que los elementos estén por encima del fondo */
 input, button {
     position: relative;
     z-index: 2; /* Asegura que los inputs y botones estén por encima de otros elementos */
-}
-
-/* Estilos de la caja de error */
-#error {
-    z-index: 2; /* Aseguramos que el mensaje de error sea visible */
 }
 
 /* Ajustes responsivos para pantallas pequeñas (móviles) */
