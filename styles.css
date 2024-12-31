@@ -51,7 +51,7 @@
 }
 
 /* Estilo de los inputs y botones en la pantalla de login */
-#login input, #login button {
+#login-form input, #login-form button {
     font-size: 18px; /* Ajuste de tamaño */
     padding: 12px;
     margin: 10px;
