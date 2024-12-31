@@ -26,7 +26,7 @@ let currentQuestion = 0;
 document.getElementById("submit-password").addEventListener("click", () => {
     const enteredPassword = document.getElementById("password").value;
     if (enteredPassword === correctPassword) {
-        document.getElementById("login").style.display = "none";
+        document.getElementById("login-screen").style.display = "none";
         document.getElementById("questions").style.display = "block";
         updateBackground();
     } else {
