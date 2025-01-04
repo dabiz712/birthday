@@ -91,10 +91,16 @@ document.getElementById("submit-answer").addEventListener("click", () => {
         if (currentQuestion < currentSet.questions.length) {
             displayCurrentQuestion();
         } else {
+             // Al responder todas correctamente, ocultar el contenedor de preguntas
+            document.getElementById("questions").style.display = "none";
+
+            // Mostrar el mensaje final (hint)
             document.getElementById("hint").style.display = "block";
+
+            // Mostrar el mensaje de cuando cargarán las siguientes preguntas
             const nextSetIndex = sets.indexOf(currentSet) + 1;
             if (nextSetIndex < sets.length) {
-                const nextTime = new Date(sets[nextSetIndex].start).toLocaleTimeString(); // Corregido
+                const nextTime = new Date(sets[nextSetIndex].start).toLocaleString(); // Corregido
                 document.getElementById("continue-message").style.display = "block";
                 document.getElementById("next-time").textContent = nextTime;
             }
