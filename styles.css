@@ -148,13 +148,15 @@
 }
 
 #accept-button {
+    font-size: 18px; /* Ajuste de tamaño */
+    padding: 12px;
+    margin: 10px;
+    border: none; /* Sin borde */
+    border-radius: 10px;
     width: 80%;
-    margin-top: 20px;
-    padding: 10px 20px;
+    max-width: 400px; /* Controlar el tamaño del campo */
     background-color: #ff6f61;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
     justify-content: center;
 }
