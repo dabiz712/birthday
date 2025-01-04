@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "2";
+const correctPassword = "1";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -157,3 +157,13 @@ function updateBackground(backgroundImage) {
         console.error("No se proporcionó imagen de fondo.");
     }
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        const focusedButton = document.activeElement;  // Obtener el elemento que tiene el foco
+        if (focusedButton && focusedButton.tagName === 'BUTTON') {
+            focusedButton.click();  // Simular un clic en el botón
+        }
+    }
+});
+
