@@ -31,6 +31,8 @@ document.getElementById("submit-password").addEventListener("click", () => {
     }
 });
 
+let currentSet = null;
+
 // Comprobar el estado del juego (si ya ha comenzado, qué set de preguntas mostrar, etc.)
 function checkGameStatus() {
     const currentDate = new Date();
@@ -73,7 +75,7 @@ function displayCurrentQuestion() {
     const question = sets[currentSet].questions[currentQuestion];
     document.getElementById("question").textContent = question.question;
     document.getElementById("answer").value = "";
-    updateBackground();
+    updateBackground(question.background);
 }
 
 // Manejar respuestas y transiciones
@@ -95,7 +97,7 @@ document.getElementById("submit-answer").addEventListener("click", () => {
 });
 
 // Función para actualizar el fondo
-function updateBackground() {
+function updateBackground(backgroundImage) {
     const background = document.getElementById("background");
-    background.style.backgroundImage = url('${questions[currentQuestion].background}');
+    background.style.backgroundImage = `url('${backgroundImage}')`;
 }
