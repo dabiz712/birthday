@@ -1,6 +1,62 @@
 // Contraseña correcta
 const correctPassword = "14082022";
 
+// Preguntas y Respuestas
+const questionSets = [
+    [
+        {
+            question: "Pregunta 1: ¿Cuál es mi color favorito?",
+            answer: "azul",
+            background: "fondo_spiderverse.jpg"
+        },
+        {
+            question: "Pregunta 2: ¿Cuántos años tengo?",
+            answer: "30",
+            background: "fondo_arcane.jpg"
+        },
+        {
+            question: "Pregunta 3: ¿Cuál es el nombre de mi perro?",
+            answer: "luna",
+            background: "fondo_cyberpunk.jpg"
+        }
+    ],
+    [
+        {
+            question: "Pregunta 4: ¿En qué ciudad nací?",
+            answer: "madrid",
+            background: "fondo_harrypotter.jpg"
+        },
+        {
+            question: "Pregunta 5: ¿Cuál es mi película favorita?",
+            answer: "interestelar",
+            background: "fondo_lotr.jpg"
+        },
+        {
+            question: "Pregunta 6: ¿Qué instrumento toco?",
+            answer: "guitarra",
+            background: "fondo_jazz.jpg"
+        }
+    ],
+    [
+        {
+            question: "Pregunta 7: ¿Qué deporte practico?",
+            answer: "fútbol",
+            background: "fondo_futbol.jpg"
+        },
+        {
+            question: "Pregunta 8: ¿Cómo se llama mi hermano?",
+            answer: "carlos",
+            background: "fondo_familia.jpg"
+        },
+        {
+            question: "Pregunta 9: ¿Cuál es mi plato favorito?",
+            answer: "paella",
+            background: "fondo_cocina.jpg"
+        }
+    ]
+];
+
+let currentSet = 0;
 let currentQuestion = 0;
 
 // Validar Contraseña
@@ -9,96 +65,72 @@ document.getElementById("submit-password").addEventListener("click", () => {
     if (enteredPassword === correctPassword) {
         document.getElementById("login-screen").style.display = "none";
         document.getElementById("questions").style.display = "block";
-        updateBackground();
+
+        if (currentSet === 0 && currentQuestion === 0) {
+            document.getElementById("question-container").style.display = "none";
+            document.getElementById("hint").style.display = "block";
+            document.getElementById("hint").textContent = "Preparando juego, vuelve más tarde.";
+        } else {
+            updateQuestion();
+        }
     } else {
         document.getElementById("error").style.display = "block";
     }
 });
 
-// Configuración de fechas de inicio y fin para cada set
-const sets = [
-    { start: "2025-01-05T00:00:00", end: "2025-01-06T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "azul" },
-        { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "30" },
-        { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "luna" }
-    ]},
-    { start: "2025-01-06T00:00:00", end: "2025-01-07T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "pizza" },
-        { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "madrid" },
-        { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "guitarra" }
-    ]},
-    { start: "2025-01-07T00:00:00", end: "2025-01-08T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "inception" },
-        { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "fútbol" },
-        { question: "Pregunta 3: ¿Cuál es mi animal favorito?", answer: "gato" }
-    ]}
-];
-
-// Comprobar el estado del juego (si ya ha comenzado, qué set de preguntas mostrar, etc.)
-function checkGameStatus() {
-    const currentDate = new Date();
-    const gameStartDate = new Date(sets[0].start);
-    
-    if (currentDate < gameStartDate) {
-        document.getElementById("waiting-screen").style.display = "flex";
-    } else {
-        document.getElementById("waiting-screen").style.display = "none";
-        showQuestionsForCurrentSet();
-    }
-}
-
-// Mostrar preguntas correspondientes según el set actual
-function showQuestionsForCurrentSet() {
-    const currentDate = new Date();
-    let currentSet = null;
-
-    for (let i = 0; i < sets.length; i++) {
-        const setStart = new Date(sets[i].start);
-        const setEnd = new Date(sets[i].end);
-        if (currentDate >= setStart && currentDate < setEnd) {
-            currentSet = sets[i];
-            break;
-        }
-    }
-
-    if (currentSet) {
-        document.getElementById("questions").style.display = "block";
-        // Mostrar las preguntas y ajustar el fondo
-        currentQuestion = 0;
-        displayCurrentQuestion();
-    } else {
-        document.getElementById("game-end-screen").style.display = "flex";
-    }
-}
-
-// Función para mostrar la pregunta actual
-function displayCurrentQuestion() {
-    const question = sets[currentSet].questions[currentQuestion];
-    document.getElementById("question").textContent = question.question;
-    document.getElementById("answer").value = "";
-}
-
-// Manejar respuestas y transiciones
+// Validar Respuestas de las Preguntas
 document.getElementById("submit-answer").addEventListener("click", () => {
     const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-    if (userAnswer === sets[currentSet].questions[currentQuestion].answer) {
+    const currentQuestionObj = questionSets[currentSet][currentQuestion];
+
+    if (userAnswer === currentQuestionObj.answer) {
         currentQuestion++;
-        if (currentQuestion < sets[currentSet].questions.length) {
-            displayCurrentQuestion();
-            updateBackground();
+        if (currentQuestion < questionSets[currentSet].length) {
+            updateQuestion();
         } else {
-            document.getElementById("hint").style.display = "block";
-            const nextTime = new Date(sets[currentSet + 1].start).toLocaleTimeString();
-            document.getElementById("continue-message").style.display = "block";
-            document.getElementById("next-time").textContent = nextTime;
+            // Termina el set actual
+            currentSet++;
+            currentQuestion = 0;
+
+            if (currentSet < questionSets.length) {
+                document.getElementById("question-container").style.display = "none";
+                document.getElementById("hint").style.display = "block";
+                document.getElementById("hint").innerHTML = `
+                    <p>¡Has completado todas las preguntas de este set!</p>
+                    <p>La pista es: "Busca en el cajón azul".</p>
+                    <p>El juego continúa a las ${getNextGameTime()}.</p>
+                `;
+            } else {
+                // Juego completado
+                document.getElementById("question-container").style.display = "none";
+                document.getElementById("hint").style.display = "block";
+                document.getElementById("hint").textContent = "Gracias por participar en el juego.";
+            }
         }
     } else {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
     }
+});
+
+// Función para actualizar la pregunta y el fondo
+function updateQuestion() {
+    const currentQuestionObj = questionSets[currentSet][currentQuestion];
+    document.getElementById("question").textContent = currentQuestionObj.question;
+    document.getElementById("answer").value = "";
+    updateBackground(currentQuestionObj.background);
+    document.getElementById("question-container").style.display = "block";
+    document.getElementById("hint").style.display = "none";
 }
 
-// Función para actualizar el fondo
-function updateBackground() {
+// Función para actualizar el fondo dinámico
+function updateBackground(image) {
     const background = document.getElementById("background");
-    background.style.backgroundImage = `url('${questions[currentQuestion].background}')`;
+    background.style.backgroundImage = `url('${image}')`;
+}
+
+// Función para calcular la hora del siguiente set
+function getNextGameTime() {
+    const currentTime = new Date();
+    currentTime.setHours(currentTime.getHours() + 1); // Ajustar según la lógica deseada
+    return currentTime.toTimeString().split(" ")[0].slice(0, 5);
 }
