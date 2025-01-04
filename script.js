@@ -92,7 +92,7 @@ document.getElementById("submit-answer").addEventListener("click", () => {
     } else {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
     }
-}
+};
 
 // Función para actualizar el fondo
 function updateBackground() {
