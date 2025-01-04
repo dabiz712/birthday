@@ -93,7 +93,7 @@ document.getElementById("submit-answer").addEventListener("click", () => {
             displayCurrentQuestion();  // Mostrar la siguiente pregunta
         } else {
             // Al haber respondido correctamente todas las preguntas del set
-            document.getElementById("questions").style.display = "none";  // Ocultar preguntas
+            //document.getElementById("questions").style.display = "none";  // Ocultar preguntas
 
             // Mostrar el mensaje final con la pista
             document.getElementById("hint").style.display = "flex";
