@@ -83,28 +83,32 @@ function displayCurrentQuestion() {
     }
 }
 
-// Manejar respuestas y transiciones
+// Manejar respuestas y transiciones entre preguntas
 document.getElementById("submit-answer").addEventListener("click", () => {
     const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
     if (userAnswer === currentSet.questions[currentQuestion].answer) {
-        currentQuestion++;
+        currentQuestion++;  // Avanzar a la siguiente pregunta
+
         if (currentQuestion < currentSet.questions.length) {
-            displayCurrentQuestion();
+            displayCurrentQuestion();  // Mostrar la siguiente pregunta
         } else {
-            // Al responder todas correctamente, ocultar el contenedor de preguntas
-            document.getElementById("questions").style.display = "none";
+            // Al haber respondido correctamente todas las preguntas del set
+            document.getElementById("questions").style.display = "none";  // Ocultar preguntas
 
-            // Mostrar el mensaje final (hint)
-            document.getElementById("hint").style.display = "block";
+            // Mostrar el mensaje final con la pista
+            document.getElementById("hint").style.display = "flex";
 
-            // Mostrar el mensaje de cuando cargarán las siguientes preguntas
+            // Mostrar el mensaje con la hora de continuación (día y hora)
             const nextSetIndex = sets.indexOf(currentSet) + 1;
             if (nextSetIndex < sets.length) {
-                const nextTime = new Date(sets[nextSetIndex].start).toLocaleString(); // Corregido
-                document.getElementById("continue-message").style.display = "block";
-                document.getElementById("next-time").textContent = nextTime;
+                const nextTime = new Date(sets[nextSetIndex].start).toLocaleString("es-ES", {
+                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                    hour: '2-digit', minute: '2-digit', second: '2-digit'
+                });
+                document.getElementById("continue-message").style.display = "flex";
+                document.getElementById("next-time").textContent = `El juego continuará el ${nextTime}.`;
             } else {
-                // Si ya no hay más sets, mostrar mensaje de fin de juego
+                // Si ya no hay más sets, se muestra el mensaje de fin de juego
                 document.getElementById("game-end-screen").style.display = "flex";
             }
         }
@@ -112,7 +116,6 @@ document.getElementById("submit-answer").addEventListener("click", () => {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
     }
 });
-
 
 // Función para actualizar el fondo
 function updateBackground(backgroundImage) {
