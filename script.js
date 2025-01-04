@@ -91,7 +91,7 @@ document.getElementById("submit-answer").addEventListener("click", () => {
         if (currentQuestion < currentSet.questions.length) {
             displayCurrentQuestion();
         } else {
-             // Al responder todas correctamente, ocultar el contenedor de preguntas
+            // Al responder todas correctamente, ocultar el contenedor de preguntas
             document.getElementById("questions").style.display = "none";
 
             // Mostrar el mensaje final (hint)
@@ -103,12 +103,16 @@ document.getElementById("submit-answer").addEventListener("click", () => {
                 const nextTime = new Date(sets[nextSetIndex].start).toLocaleString(); // Corregido
                 document.getElementById("continue-message").style.display = "block";
                 document.getElementById("next-time").textContent = nextTime;
+            } else {
+                // Si ya no hay más sets, mostrar mensaje de fin de juego
+                document.getElementById("game-end-screen").style.display = "flex";
             }
         }
     } else {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
     }
 });
+
 
 // Función para actualizar el fondo
 function updateBackground(backgroundImage) {
