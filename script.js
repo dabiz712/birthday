@@ -49,7 +49,6 @@ function checkGameStatus() {
 // Mostrar preguntas correspondientes según el set actual
 function showQuestionsForCurrentSet() {
     const currentDate = new Date();
-    let currentSet = null;
 
     for (let i = 0; i < sets.length; i++) {
         const setStart = new Date(sets[i].start);
@@ -87,15 +86,18 @@ function displayCurrentQuestion() {
 // Manejar respuestas y transiciones
 document.getElementById("submit-answer").addEventListener("click", () => {
     const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-    if (userAnswer === sets[currentSet].questions[currentQuestion].answer) {
+    if (userAnswer === currentSet.questions[currentQuestion].answer) {
         currentQuestion++;
-        if (currentQuestion < sets[currentSet].questions.length) {
+        if (currentQuestion < currentSet.questions.length) {
             displayCurrentQuestion();
         } else {
             document.getElementById("hint").style.display = "block";
-            const nextTime = new Date(sets[currentSet + 1].start).toLocaleTimeString();
-            document.getElementById("continue-message").style.display = "block";
-            document.getElementById("next-time").textContent = nextTime;
+            const nextSetIndex = sets.indexOf(currentSet) + 1;
+            if (nextSetIndex < sets.length) {
+                const nextTime = new Date(sets[nextSetIndex].start).toLocaleTimeString(); // Corregido
+                document.getElementById("continue-message").style.display = "block";
+                document.getElementById("next-time").textContent = nextTime;
+            }
         }
     } else {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
