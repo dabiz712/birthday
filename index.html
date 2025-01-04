@@ -17,6 +17,11 @@
         </div>
     </div>
 
+    <!-- Sección de Espera (antes de la fecha de inicio del juego) -->
+    <div id="waiting-screen" style="display: none;">
+        <div id="waiting-message">Preparando el juego, vuelve más tarde...</div>
+    </div>
+
     <!-- Sección de Preguntas -->
     <div id="questions" style="display: none;">
         <h1>¡Bienvenido a tu aventura de cumpleaños!</h1>
@@ -30,8 +35,17 @@
             <div id="completed-message">
                 <p>¡Has completado todas las preguntas! La pista es: "Busca en el cajón azul".</p>
             </div>
+            <div id="continue-message" style="display: none;">
+                <p>El juego continuará a las <span id="next-time"></span>.</p>
+            </div>
         </div>
     </div>
+
+    <!-- Sección de Fin de Juego -->
+    <div id="game-end-screen" style="display: none;">
+        <div id="end-message">Gracias por participar en el juego.</div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
