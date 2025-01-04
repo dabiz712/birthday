@@ -3,47 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalo de Cumpleaños</title>
+    <title>Cuestionario Dinámico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sección de Login -->
+    <!-- Pantalla de inicio de sesión -->
     <div id="login-screen">
-        <div id="login-text">Introduce la contraseña para continuar:</div>
-        <div id="login-form">
-            <input type="password" id="password" placeholder="Contraseña">
-            <button id="submit-password">Acceder</button>
-            <p id="error" style="color: red; display: none;">Contraseña incorrecta.</p>
-        </div>
+        <h1>Bienvenido</h1>
+        <p>Por favor, introduce la contraseña para comenzar:</p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <button id="submit-password">Ingresar</button>
+        <p id="error" style="display:none; color: red;">Contraseña incorrecta. Inténtalo de nuevo.</p>
     </div>
 
-    <!-- Sección de Espera (antes de la fecha de inicio del juego) -->
-    <div id="waiting-screen" style="display: none;">
-        <div id="waiting-message">Preparando el juego, vuelve más tarde...</div>
-    </div>
-
-    <!-- Sección de Preguntas -->
+    <!-- Pantalla de preguntas -->
     <div id="questions" style="display: none;">
-        <h1>¡Bienvenido a tu aventura de cumpleaños!</h1>
-        <div id="background"></div> <!-- Fondo dinámico -->
-        <div id="question-container">
-            <p id="question">Pregunta 1: ¿Cuál es mi color favorito?</p>
-            <input type="text" id="answer" placeholder="Tu respuesta aquí">
-            <button id="submit-answer">Enviar</button>
-        </div>
-        <div id="hint" style="display: none;">
-            <div id="completed-message">
-                <p>¡Has completado todas las preguntas! La pista es: "Busca en el cajón azul".</p>
+        <div id="background" class="background">
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <input type="text" id="answer" placeholder="Escribe tu respuesta aquí">
+                <button id="submit-answer">Enviar respuesta</button>
             </div>
-            <div id="continue-message" style="display: none;">
-                <p>El juego continuará a las <span id="next-time"></span>.</p>
+            <div id="hint" style="display: none;">
+                <h2>¡Felicidades! Has completado el cuestionario.</h2>
             </div>
         </div>
     </div>
 
-    <!-- Sección de Fin de Juego -->
-    <div id="game-end-screen" style="display: none;">
-        <div id="end-message">Gracias por participar en el juego.</div>
+    <!-- Pantalla de contenido no disponible -->
+    <div id="unavailable-screen" style="display: none; justify-content: center; align-items: center; text-align: center;">
+        <div>
+            <h1>Contenido no disponible</h1>
+            <p>Lo sentimos, no hay sets de preguntas disponibles en este momento.</p>
+            <p id="next-available"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>
