@@ -110,7 +110,7 @@
 }
 
 /* Estilo para la pantalla de hint */
-#hint-screen, {
+#hint-screen {
     position: fixed; /* Fija la posición */
     top: 0;
     left: 0;
@@ -156,6 +156,10 @@
     border-radius: 5px;
     cursor: pointer;
     justify-content: center;
+}
+
+#hint-screen, #completed-message, #accept-button {
+  box-sizing: border-box;
 }
 
 /* Asegúrate de que no se muestren las preguntas cuando se muestre el mensaje de continuación */
