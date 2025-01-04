@@ -4,7 +4,7 @@ const correctPassword = "14082022";
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
     { start: "2025-01-04T00:00:00", end: "2025-01-06T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "1", background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "2", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "30", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "luna", background: "fondo_cyberpunk.jpg" }
     ]},
