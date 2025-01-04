@@ -12,122 +12,6 @@
     transition: background-image 0.5s ease-in-out; /* Suavidad al cambiar el fondo */
 }
 
-/* Estilo para el mensaje de espera antes del inicio */
-#waiting-screen {
-    position: fixed; /* Fija la posición */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('balatro.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    flex-direction: column; /* Apila los elementos en columna */
-    text-align: center; /* Asegura que todo el contenido esté centrado */
-}
-
-#waiting-message {
-    background-color: rgba(255, 255, 255, 0.6); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-
-/* Estilo para el mensaje de fin de juego */
-#game-end-screen {
-    position: fixed; /* Fija la posición */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('balatro.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    flex-direction: column; /* Apila los elementos en columna */
-    text-align: center; /* Asegura que todo el contenido esté centrado */
-}
-
-#end-message {
-    background-color: rgba(255, 255, 255, 0.6); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-
-/* Estilo para la pantalla de preguntas */
-#continue-message {
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Contenedor de preguntas */
-#question-container {
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto; /* Espaciado superior */
-    text-align: center; /* Alineación del texto */
-}
-
-/* Alineación del texto de las preguntas */
-#question {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Cambios en el body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    display: flex;
-    flex-direction: column; /* Mantiene disposición vertical */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: flex-start; /* Alinea el contenido en la parte superior */
-    height: 100vh;
-    margin: 0; /* Elimina márgenes predeterminados del navegador */
-    padding-top: 20px; /* Espacio desde la parte superior */
-}
-
-/* Título principal */
-h1 {
-    color: #ff6f61;
-    text-align: center; /* Asegura que el texto esté centrado */
-    margin: 20px 0; /* Ajuste de márgenes */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    font-size: 24px; /* Tamaño de fuente ajustable */
-    word-wrap: break-word; /* Permite que el texto se divida en varias líneas si es necesario */
-    word-break: break-word; /* Rompe las palabras largas si es necesario */
-}
-
 /* Estilos específicos para la pantalla de login */
 #login-screen {
     position: fixed; /* Fija la posición */
@@ -177,16 +61,38 @@ h1 {
     max-width: 400px; /* Controlar el tamaño del campo */
 }
 
-/* Estilo del mensaje de error */
-#error {
-    color: red;
-    font-size: 16px;
-    margin-top: 10px;
+/* Estilo para el mensaje de espera antes del inicio */
+#waiting-screen {
+    position: fixed; /* Fija la posición */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('balatro.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    flex-direction: column; /* Apila los elementos en columna */
+    text-align: center; /* Asegura que todo el contenido esté centrado */
 }
 
-/* Contenedor del mensaje de completado */
-#completed-message {
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco con algo de transparencia */
+#waiting-message {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor de preguntas */
+#question-container {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco semitransparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -196,11 +102,113 @@ h1 {
     text-align: center; /* Alineación del texto */
 }
 
-/* Estilo del texto dentro del mensaje */
-#completed-message p {
+/* Alineación del texto de las preguntas */
+#question {
     font-size: 20px;
     font-weight: bold;
     color: #333;
+}
+
+/* Estilo para el mensaje de hint y el mensaje de continuación */
+#hint, #continue-message, #completed-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('balatro.jpg'); /* Usa el mismo fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1;
+    flex-direction: column; /* Apila los elementos */
+    text-align: center; /* Alineación del texto */
+}
+
+#hint {
+    display: none; /* Mantener oculto hasta que se active */
+}
+
+#completed-message, #continue-message {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto; /* Espaciado */
+}
+
+/* Asegúrate de que no se muestren las preguntas cuando se muestre el mensaje de continuación */
+#questions {
+    display: none;
+}
+
+
+/* Estilo para el mensaje de fin de juego */
+#game-end-screen {
+    position: fixed; /* Fija la posición */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('balatro.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    flex-direction: column; /* Apila los elementos en columna */
+    text-align: center; /* Asegura que todo el contenido esté centrado */
+}
+
+#end-message {
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Cambios en el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Mantiene disposición vertical */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100vh;
+    margin: 0; /* Elimina márgenes predeterminados del navegador */
+    padding-top: 20px; /* Espacio desde la parte superior */
+}
+
+/* Título principal */
+h1 {
+    color: #ff6f61;
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin: 20px 0; /* Ajuste de márgenes */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    font-size: 24px; /* Tamaño de fuente ajustable */
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas si es necesario */
+    word-break: break-word; /* Rompe las palabras largas si es necesario */
+}
+
+/* Estilo del mensaje de error */
+#error {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Asegurarnos de que los elementos estén por encima del fondo */
