@@ -147,6 +147,16 @@
     display: block;
 }
 
+#accept-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Asegúrate de que no se muestren las preguntas cuando se muestre el mensaje de continuación */
 #questions {
     display: none;
