@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -32,6 +32,8 @@ document.getElementById("submit-password").addEventListener("click", () => {
 });
 
 let currentSet = null;
+let currentQuestion = 0;
+const totalSets = 3;
 
 // Comprobar el estado del juego (si ya ha comenzado, qué set de preguntas mostrar, etc.)
 function checkGameStatus() {
@@ -99,25 +101,33 @@ document.getElementById("submit-answer").addEventListener("click", () => {
             // Mostrar el mensaje con la pista
             document.getElementById("completed-message").style.display = "block";  // Mostrar mensaje de completado
 
-            // Mostrar el mensaje con la hora de continuación (día y hora)
-            const nextSetIndex = sets.indexOf(currentSet) + 1;
-            if (nextSetIndex < sets.length) {
-                const nextTime = new Date(sets[nextSetIndex].start).toLocaleString("es-ES", {
-                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
-                    hour: '2-digit', minute: '2-digit', second: '2-digit'
-                });
-                document.getElementById("continue-message").style.display = "block";
-                document.getElementById("next-time").textContent = `${nextTime}.`;
-            } else {
-                // Si ya no hay más sets, se muestra el mensaje de fin de juego
-                document.getElementById("game-end-screen").style.display = "flex";
-            }
+            // Mostrar el botón "Aceptar"
+            document.getElementById("accept-button").style.display = "block";  // Mostrar el botón
 
-            // Actualizar el fondo para el hint
-            updateBackground('balatro.jpg');  // Fondo correcto para la pantalla de hint
+            updateBackground('balatro.jpg');
         }
     } else {
         alert("Respuesta incorrecta, inténtalo de nuevo.");
+    }
+});
+
+// Función al hacer clic en "Aceptar"
+document.getElementById("accept-button").addEventListener("click", () => {
+    document.getElementById("completed-message").style.display = "none";
+    document.getElementById("accept-button").style.display = "none";  // Ocultar el botón
+
+    // Verificar si hay más sets
+    const nextSetIndex = sets.indexOf(currentSet) + 1;
+    if (nextSetIndex < sets.length) {
+        const nextTime = new Date(sets[nextSetIndex].start).toLocaleString("es-ES", {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit', second: '2-digit'
+        });
+        document.getElementById("continue-message").style.display = "block";
+        document.getElementById("next-time").textContent = `${nextTime}.`;
+    } else {
+        // Fin del juego, mostrar el mensaje de fin
+        document.getElementById("end-message").style.display = "block";
     }
 });
 
