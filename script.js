@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -158,12 +158,11 @@ function updateBackground(backgroundImage) {
     }
 }
 
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        const focusedButton = document.activeElement;  // Obtener el elemento que tiene el foco
-        if (focusedButton && focusedButton.tagName === 'BUTTON') {
-            focusedButton.click();  // Simular un clic en el botón
-        }
+// Escuchar cuando se presiona Enter en el campo de respuesta
+document.getElementById("answer").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado (enviar el formulario)
+        document.getElementById("submit-answer").click(); // Hacer clic en el botón de enviar respuesta
     }
 });
 
