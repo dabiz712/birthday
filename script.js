@@ -1,22 +1,22 @@
 // Contraseña correcta
-const correctPassword = "2";
+const correctPassword = "1";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
-    { start: "2025-01-04T00:00:00", end: "2025-01-06T00:00:00", questions: [
+    { start: "2025-01-04T00:00:00", end: "2025-01-04T01:00:00", questions: [
         { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "1", background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "30", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "luna", background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "1", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ]},
-    { start: "2025-01-06T00:00:00", end: "2025-01-07T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "pizza", background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "madrid", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "guitarra", background: "fondo_cyberpunk.jpg" }
+    { start: "2025-01-04T05:00:00", end: "2025-01-04T07:00:00", questions: [
+        { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "1", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ]},
-    { start: "2025-01-07T00:00:00", end: "2025-01-08T00:00:00", questions: [
-        { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "inception", background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "fútbol", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Cuál es mi animal favorito?", answer: "gato", background: "fondo_cyberpunk.jpg" }
+    { start: "2025-01-04T09:00:00", end: "2025-01-04T10:00:00", questions: [
+        { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "1", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Cuál es mi animal favorito?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ]}
 ];
 
