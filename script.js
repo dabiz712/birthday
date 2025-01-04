@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "14082022";
+const correctPassword = "1";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -107,7 +107,7 @@ document.getElementById("submit-answer").addEventListener("click", () => {
                     hour: '2-digit', minute: '2-digit', second: '2-digit'
                 });
                 document.getElementById("continue-message").style.display = "block";
-                document.getElementById("next-time").textContent = `El juego continuará el ${nextTime}.`;
+                document.getElementById("next-time").textContent = `${nextTime}.`;
             } else {
                 // Si ya no hay más sets, se muestra el mensaje de fin de juego
                 document.getElementById("game-end-screen").style.display = "flex";
