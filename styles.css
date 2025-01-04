@@ -120,14 +120,11 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column; /* Asegura que los mensajes estén apilados */
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente */
     z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    flex-direction: column; /* Apila los elementos en columna */
     text-align: center; /* Asegura que todo el contenido esté centrado */
-}
-
-#hint {
     display: none; /* Mantener oculto hasta que se active */
 }
 
@@ -141,7 +138,7 @@
     color: #333;
     width: 80%;
     max-width: 600px;
-    margin: 20px auto; /* Espaciado */
+    margin: 10px auto; /* Espaciado */
 }
 
 /* Asegúrate de que no se muestren las preguntas cuando se muestre el mensaje de continuación */
