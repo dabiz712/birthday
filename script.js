@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
