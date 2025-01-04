@@ -54,6 +54,7 @@ function showQuestionsForCurrentSet() {
     for (let i = 0; i < sets.length; i++) {
         const setStart = new Date(sets[i].start);
         const setEnd = new Date(sets[i].end);
+        console.log(`Comprobando set ${i}: ${sets[i].start} - ${sets[i].end}`);
         if (currentDate >= setStart && currentDate < setEnd) {
             currentSet = sets[i];
             break;
@@ -61,6 +62,7 @@ function showQuestionsForCurrentSet() {
     }
 
     if (currentSet) {
+        console.log("currentSet:", currentSet); // Depuración
         document.getElementById("questions").style.display = "block";
         // Mostrar las preguntas y ajustar el fondo
         currentQuestion = 0;
@@ -72,10 +74,14 @@ function showQuestionsForCurrentSet() {
 
 // Función para mostrar la pregunta actual
 function displayCurrentQuestion() {
-    const question = sets[currentSet].questions[currentQuestion];
-    document.getElementById("question").textContent = question.question;
-    document.getElementById("answer").value = "";
-    updateBackground(question.background);
+    if (currentSet && currentSet.questions && currentSet.questions.length > 0) {  // Asegúrate de que currentSet y questions estén definidos
+        const question = currentSet.questions[currentQuestion]; // Usa currentSet aquí
+        document.getElementById("question").textContent = question.question;
+        document.getElementById("answer").value = "";
+        updateBackground(question.background); // Pasa el fondo de la pregunta actual
+    } else {
+        console.error("No se encontraron preguntas en el set actual.");
+    }
 }
 
 // Manejar respuestas y transiciones
@@ -98,6 +104,10 @@ document.getElementById("submit-answer").addEventListener("click", () => {
 
 // Función para actualizar el fondo
 function updateBackground(backgroundImage) {
-    const background = document.getElementById("background");
-    background.style.backgroundImage = `url('${backgroundImage}')`;
+    if (backgroundImage) {
+        const background = document.getElementById("background");
+        background.style.backgroundImage = `url('${backgroundImage}')`;  // Corregir la sintaxis de las comillas
+    } else {
+        console.error("No se proporcionó imagen de fondo.");
+    }
 }
