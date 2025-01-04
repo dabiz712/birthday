@@ -1,24 +1,40 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
-    { start: "2025-01-04T00:00:00", end: "2025-01-04T06:11:59", questions: [
+    { start: "2025-01-04T00:00:00", end: "2025-01-04T06:11:59", 
+     questions: [
         { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "1", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "1", background: "fondo_cyberpunk.jpg" }
-    ]},
-    { start: "2025-01-04T06:12:00", end: "2025-01-08T07:00:00", questions: [
+    ],
+    hint: "¡Felicidades, has completado las preguntas! Mira en el cajón"
+    },
+    { start: "2025-01-04T06:12:00", end: "2025-01-08T07:00:00", 
+     questions: [
         { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "1", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "1", background: "fondo_cyberpunk.jpg" }
-    ]},
-    { start: "2025-01-08T09:00:00", end: "2025-01-08T10:00:00", questions: [
+    ],
+    hint: "¡Felicidades, has completado las preguntas! Mira en el la mesilla"
+    },
+    { start: "2025-01-08T09:00:00", end: "2025-01-08T10:00:00", 
+     questions: [
         { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "1", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Cuál es mi animal favorito?", answer: "1", background: "fondo_cyberpunk.jpg" }
-    ]}
+    ],
+    hint: "¡Felicidades, has completado las preguntas! Mira en la cocina"
+    }
 ];
+
+const pistas = {
+  set1: "Pista para el primer set de preguntas: El regalo está cerca de un árbol.",
+  set2: "Pista para el segundo set de preguntas: Busca cerca de una fuente.",
+  set3: "Pista para el tercer set de preguntas: El regalo está cerca de un banco en el parque.",
+  // Añadir más sets y pistas según sea necesario
+};
 
 // Validar Contraseña
 document.getElementById("submit-password").addEventListener("click", () => {
@@ -99,8 +115,9 @@ document.getElementById("submit-answer").addEventListener("click", () => {
             document.getElementById("hint-screen").style.display = "flex";  // Mostrar mensaje de hint
 
             // Mostrar el mensaje con la pista
+            const hint = currentSet.hint;
             document.getElementById("completed-message").style.display = "block";  // Mostrar mensaje de completado
-
+            document.getElementById("completed-message").innerText = hint;  // Mostrar mensaje de completado
             // Mostrar el botón "Aceptar"
             document.getElementById("accept-button").style.display = "block";  // Mostrar el botón
 
