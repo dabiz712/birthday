@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -55,9 +55,13 @@ const totalSets = 3;
 function checkGameStatus() {
     const currentDate = new Date();
     const gameStartDate = new Date(sets[0].start);
+    const gameEndDate = new Date(sets[sets.length - 1].end);
     
     if (currentDate < gameStartDate) {
         document.getElementById("waiting-screen").style.display = "flex";
+    } else if (currentDate > gameEndDate) {
+        document.getElementById("waiting-screen").style.display = "none";
+        document.getElementById("game-end-screen").style.display = "flex"; 
     } else {
         document.getElementById("waiting-screen").style.display = "none";
         showQuestionsForCurrentSet();
