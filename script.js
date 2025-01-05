@@ -1,5 +1,5 @@
 // Contraseña correcta
-const correctPassword = "2";
+const correctPassword = "1";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
@@ -19,7 +19,7 @@ const sets = [
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en el la mesilla"
     },
-    { start: "2025-01-04T08:00:00", end: "2025-01-08T10:00:00", 
+    { start: "2025-01-04T08:00:00", end: "2025-01-04T10:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "1", background: "fondo_arcane.jpg" },
