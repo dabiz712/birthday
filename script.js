@@ -1,9 +1,9 @@
 // Contraseña correcta
-const correctPassword = "1";
+const correctPassword = "2";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
-    { start: "2025-01-04T00:00:00", end: "2025-01-04T06:11:59", 
+    { start: "2025-01-06T00:00:00", end: "2025-01-07T00:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "1", background: "fondo_arcane.jpg" },
@@ -11,7 +11,7 @@ const sets = [
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en el cajón"
     },
-    { start: "2025-01-04T06:12:00", end: "2025-01-04T07:00:00", 
+    { start: "2025-01-07T00:00:00", end: "2025-01-08T00:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "1", background: "fondo_arcane.jpg" },
@@ -19,7 +19,7 @@ const sets = [
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en el la mesilla"
     },
-    { start: "2025-01-04T08:00:00", end: "2025-01-04T10:00:00", 
+    { start: "2025-01-08T00:00:00", end: "2025-01-09T00:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "1", background: "fondo_arcane.jpg" },
