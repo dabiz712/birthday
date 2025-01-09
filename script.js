@@ -6,24 +6,24 @@ const sets = [
     { start: "2025-01-06T00:00:00", end: "2025-02-07T00:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Dónde fue nuestro primer beso?", answer: ["muelle", "paseo", "río"], background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "1", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "1", background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 2: ¿Cuál es el love language de David? (Pista: las opciones son 'actos de servicio', 'contacto físico', 'tiempo de calidad', 'regalos' y 'palabras de afirmación", answer: "tiempo de calidad", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Cuál es la canción favorita de David?", answer: "car radio", background: "fondo_cyberpunk.jpg" }
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en el cajón"
     },
     { start: "2025-02-07T00:00:00", end: "2025-02-08T00:00:00", 
      questions: [
-        { question: "Pregunta 1: ¿Qué nos regalaron en nuestra primera cita?", answer: "Pulsera de cuero", background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "1", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "1", background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 1: ¿Qué nos regalaron en nuestra primera cita?", answer: ["pulsera de cuero", "pulsera"], background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 2: ¿Cuál es la película favorita de David?", answer: ["aftersun", "interstellar"] , background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en el la mesilla"
     },
     { start: "2025-02-08T00:00:00", end: "2025-02-09T00:00:00", 
      questions: [
-        { question: "Pregunta 1: ¿Cuál es mi película favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿Qué deporte me gusta más?", answer: "1", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Cuál es mi animal favorito?", answer: "1", background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 1: ¿De quién es la canción que David asocia a vuestra relación?", answer: ["guitarrica", "guitarricadelafuente"], background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 2: ¿?", answer: "1", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Cuál es la fantasía de David?", answer: ["tienda de campaña", "camping", "monte"], background: "fondo_cyberpunk.jpg" }
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira en la cocina"
     }
