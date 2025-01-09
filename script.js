@@ -1,11 +1,11 @@
 // Contraseña correcta
-const correctPassword = "2";
+const correctPassword = "14082022";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
     { start: "2025-01-06T00:00:00", end: "2025-01-07T00:00:00", 
      questions: [
-        { question: "Pregunta 1: ¿Cuál es mi color favorito?", answer: "1", background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 1: ¿Dónde fue nuestro primer beso?", answer: ["muelle", "paseo", "río"], background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuántos años tengo?", answer: "1", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Cuál es el nombre de mi perro?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ],
@@ -13,7 +13,7 @@ const sets = [
     },
     { start: "2025-01-07T00:00:00", end: "2025-01-08T00:00:00", 
      questions: [
-        { question: "Pregunta 1: ¿Cuál es mi comida favorita?", answer: "1", background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 1: ¿Qué nos regalaron en nuestra primera cita?", answer: "Pulsera de cuero", background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿En qué ciudad nací?", answer: "1", background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Qué instrumento toco?", answer: "1", background: "fondo_cyberpunk.jpg" }
     ],
@@ -108,7 +108,7 @@ function displayCurrentQuestion() {
 // Manejar respuestas y transiciones entre preguntas
 document.getElementById("submit-answer").addEventListener("click", () => {
     const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-    if (userAnswer === currentSet.questions[currentQuestion].answer) {
+    if (currentSet.questions[currentQuestion].answer.includes(userAnswer)) {
         currentQuestion++;  // Avanzar a la siguiente pregunta
 
         if (currentQuestion < currentSet.questions.length) {
