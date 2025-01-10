@@ -3,7 +3,7 @@ const correctPassword = "14082022";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
-    { start: "2025-01-10T23:00:00", end: "2025-01-11T14:00:00", 
+    { start: "2025-01-11T09:00:00", end: "2025-01-11T15:00:00", 
      questions: [
         { question: "Pregunta 1: ¿Dónde fue nuestro primer beso?", answer: ["muelle", "paseo", "río", "guadalquivir"], background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuál es la capital del país al que David tiene más ganas de ir contigo en plan romántico?", answer: ["reikiavik", "reykjavik"], background: "fondo_arcane.jpg" },
@@ -11,7 +11,7 @@ const sets = [
     ],
     hint: "¡Felicidades, has completado las preguntas! Mira debajo de la cama"
     },
-    { start: "2025-01-11T16:00:00", end: "2025-01-11T23:59:00", 
+    { start: "2025-01-11T17:00:00", end: "2025-01-11T23:59:00", 
      questions: [
         { question: "Pregunta 1: ¿Qué nos regalaron en nuestra primera cita?", answer: ["pulsera de cuero", "pulsera"], background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuál es la película favorita de David?", answer: ["aftersun", "interstellar"] , background: "fondo_arcane.jpg" },
