@@ -3,29 +3,29 @@ const correctPassword = "14082022";
 
 // Configuración de fechas de inicio y fin para cada set
 const sets = [
-    { start: "2025-01-06T00:00:00", end: "2025-02-07T00:00:00", 
+    { start: "2025-01-10T23:00:00", end: "2025-01-11T14:00:00", 
      questions: [
-        { question: "Pregunta 1: ¿Dónde fue nuestro primer beso?", answer: ["muelle", "paseo", "río"], background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿Cuál es el love language de David? (Pista: las opciones son 'actos de servicio', 'contacto físico', 'tiempo de calidad', 'regalos' y 'palabras de afirmación", answer: "tiempo de calidad", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 1: ¿Dónde fue nuestro primer beso?", answer: ["muelle", "paseo", "río", "guadalquivir"], background: "fondo_spiderverse.jpg" },
+        { question: "Pregunta 2: ¿Cuál es la capital del país al que David tiene más ganas de ir contigo en plan romántico?", answer: ["reikiavik", "reykjavik"], background: "fondo_arcane.jpg" },
         { question: "Pregunta 3: ¿Cuál es la canción favorita de David?", answer: "car radio", background: "fondo_cyberpunk.jpg" }
     ],
-    hint: "¡Felicidades, has completado las preguntas! Mira en el cajón"
+    hint: "¡Felicidades, has completado las preguntas! Mira debajo de la cama"
     },
-    { start: "2025-02-07T00:00:00", end: "2025-02-08T00:00:00", 
+    { start: "2025-01-11T16:00:00", end: "2025-01-11T23:59:00", 
      questions: [
         { question: "Pregunta 1: ¿Qué nos regalaron en nuestra primera cita?", answer: ["pulsera de cuero", "pulsera"], background: "fondo_spiderverse.jpg" },
         { question: "Pregunta 2: ¿Cuál es la película favorita de David?", answer: ["aftersun", "interstellar"] , background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿?", answer: "1", background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 3: ¿Qué vamos a cenar hoy?", answer: "musaka", background: "fondo_cyberpunk.jpg" }
     ],
-    hint: "¡Felicidades, has completado las preguntas! Mira en el la mesilla"
+    hint: "¡Felicidades, has completado las preguntas! Mira detrás del Trono de Hierro"
     },
-    { start: "2025-02-08T00:00:00", end: "2025-02-09T00:00:00", 
+    { start: "2025-01-12T10:00:00", end: "2025-01-12T23:59:00", 
      questions: [
         { question: "Pregunta 1: ¿De quién es la canción que David asocia a vuestra relación?", answer: ["guitarrica", "guitarricadelafuente"], background: "fondo_spiderverse.jpg" },
-        { question: "Pregunta 2: ¿?", answer: "1", background: "fondo_arcane.jpg" },
-        { question: "Pregunta 3: ¿Cuál es la fantasía de David?", answer: ["tienda de campaña", "camping", "monte"], background: "fondo_cyberpunk.jpg" }
+        { question: "Pregunta 2: ¿Cuál es el love language de David? (Pista: las opciones son 'actos de servicio', 'contacto físico', 'tiempo de calidad', 'regalos' y 'palabras de afirmación)", answer: "tiempo de calidad", background: "fondo_arcane.jpg" },
+        { question: "Pregunta 3: ¿Cuál es la fantasía de David?", answer: ["tienda de campaña", "camping", "monte", "bajo las estrellas", "noche en el campo"], background: "fondo_cyberpunk.jpg" }
     ],
-    hint: "¡Felicidades, has completado las preguntas! Mira en la cocina"
+    hint: "¡Felicidades, has completado las preguntas! Segundo cajón fondo derecha"
     }
 ];
 
